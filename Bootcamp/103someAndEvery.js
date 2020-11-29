@@ -21,9 +21,7 @@ const movies = [
   },
 ];
 
-// const accuIMDB = movies.reduce((a, b) => {
-// return a.IMDB + b.IMDB;
-// });
+const everyMovieAbove5 = movies.every((movie) => movie.IMDB > 6.7);
 
 //  let alpha = [
 //   "a",

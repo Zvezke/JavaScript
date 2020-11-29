@@ -21,9 +21,7 @@ const movies = [
   },
 ];
 
-// const accuIMDB = movies.reduce((a, b) => {
-// return a.IMDB + b.IMDB;
-// });
+const nameWithA = names.filter((name) => name.toLowerCase().includes("a"));
 
 //  let alpha = [
 //   "a",
