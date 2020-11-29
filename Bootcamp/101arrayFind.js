@@ -23,11 +23,10 @@ const movies = [
 
 const foundName = names.find((name) => name.toLowerCase().includes("n"));
 
-const highRating = movies.find(
-  (highRated) => highRated.IMDB >= 7 // ? highRated.title : "No movie, sorry"
-);
+const highRating = movies.find((highRated) => highRated.IMDB >= 7);
 
 const findJørgen = movies.find((jørgen) => jørgen.maker.includes("Jørgen"));
+
 //  let alpha = [
 //   "a",
 //   "b",
