@@ -21,7 +21,9 @@ const movies = [
   },
 ];
 
-test = [];
+const [, { maker }] = movies;
+
+// test = [];
 
 // movies.forEach((movie) => {
 // if (movie.IMDB > 7) {
@@ -29,19 +31,15 @@ test = [];
 // }
 // });
 
-movies.forEach((movie) => {
-  if (!movie.maker.toLocaleLowerCase().includes("l")) {
-    test.push(movie.maker);
-  }
-});
-
-// const ratings = movies.filter((ratings) => ratings > 5);
-
-// const ratings = movies.IMDB((rating) => );
-
-// const accuIMDB = movies.reduce((a, b) => {
-// return a.IMDB + b.IMDB;
+// movies.forEach((movie) => {
+// if (!movie.maker.toLocaleLowerCase().includes("l")) {
+// test.push(movie.maker);
+// }
 // });
+
+// for (const movie of movies) {
+// if (movie.maker.toLowerCase().includes("l")) test.push(movie.maker);
+// }
 
 //  let alpha = [
 //   "a",
