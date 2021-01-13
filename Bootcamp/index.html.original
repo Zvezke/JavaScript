@@ -7,14 +7,9 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="main">
-    <div id="landingPage">
-      <!-- <img -->
-      <!-- id="landingPage" -->
-      <!-- src="/images/michael-dam-1xpnPZJJHuM-unsplash.jpg" -->
-      <!-- alt="Faroe Islands" -->
-      <!-- /> -->
+    <div class="main">
+      <button class="btn">Click here!</button>
     </div>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
