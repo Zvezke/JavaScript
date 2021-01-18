@@ -109,6 +109,14 @@ p {
   /* margin: 0 auto; */
 }
 
+.napTime {
+  background-image: url(/images/sleepingCat.jpg);
+  width: 50%;
+  /* display: flex; */
+  /* align-items: center; */
+  /* margin: 0 auto; */
+}
+
 #btn {
   font-size: 1.5rem;
   letter-spacing: 0.1rem;

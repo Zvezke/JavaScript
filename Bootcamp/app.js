@@ -2,6 +2,7 @@ const btn = document.querySelector("#btn");
 const landingPage = document.querySelector("#landingPage");
 const box = document.querySelector("#box");
 const lunch = document.querySelector("#lunch");
+const nap = document.querySelector("#nap");
 const partyTime = document.querySelector(".partyTime");
 
 const clock = () => {
@@ -16,10 +17,22 @@ const toggleText = () => {
     ? (btn.innerHTML = "Party time!")
     : (btn.innerHTML = "Enough!");
 };
-const dropdownOption = () => {
+
+const lunchDropdownOption = () => {
   landingPage.classList.toggle("lunchTime");
   box.classList.toggle("box");
   toggleText();
+};
+
+const napDropdownOption = () => {
+  landingPage.classList.toggle("napTime");
+  box.classList.toggle("box");
+  toggleText();
+};
+
+const startParty = () => {
+  landingPage.classList.add("partyTime");
+  box.classList.remove("box");
 };
 
 const endParty = () => {
@@ -30,14 +43,8 @@ const endLunch = () => {
   landingPage.classList.remove("lunchTime");
 };
 
-const startParty = () => {
-  landingPage.classList.add("partyTime");
-  box.classList.remove("box");
-};
-
-const startLunch = () => {
-  landingPage.classList.add("lunchTime");
-  box.classList.remove("box");
+const napLunch = () => {
+  landingPage.classList.remove("napTime");
 };
 
 btn.addEventListener("click", () => {
@@ -62,6 +69,13 @@ btn.addEventListener("click", () => {
 lunch.addEventListener("change", () => {
   const lunchTime = lunch.value;
   const actualTime = Date().substr(16, 2);
-  lunchTime === actualTime ? dropdownOption() : endLunch();
+  lunchTime === actualTime ? lunchDropdownOption() : endLunch();
 });
+
+nap.addEventListener("change", () => {
+  const lunchTime = lunch.value;
+  const actualTime = Date().substr(16, 2);
+  lunchTime === actualTime ? napDropdownOption() : napLunch();
+});
+
 clock();
