@@ -103,7 +103,10 @@ p {
 
 .lunchTime {
   background-image: url(/images/catEatingSushi.jpg);
-  width: 50%;
+  background-size: 60%;
+  background-position: top;
+  /* width: 80%; */
+  /* top: 0; */
   /* display: flex; */
   /* align-items: center; */
   /* margin: 0 auto; */
@@ -111,7 +114,7 @@ p {
 
 .napTime {
   background-image: url(/images/sleepingCat.jpg);
-  width: 50%;
+  width: 70%;
   /* display: flex; */
   /* align-items: center; */
   /* margin: 0 auto; */

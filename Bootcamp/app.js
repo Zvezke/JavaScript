@@ -43,7 +43,7 @@ const endLunch = () => {
   landingPage.classList.remove("lunchTime");
 };
 
-const napLunch = () => {
+const endNap = () => {
   landingPage.classList.remove("napTime");
 };
 
@@ -53,6 +53,8 @@ btn.addEventListener("click", () => {
   if (landingPage.classList.contains("lunchTime")) {
     console.log("endLunch");
     endLunch();
+  } else if (landingPage.classList.contains("napTime")) {
+    endNap();
   } else if (!landingPage.classList.contains("partyTime")) {
     console.log("startParty");
     startParty();
@@ -73,9 +75,9 @@ lunch.addEventListener("change", () => {
 });
 
 nap.addEventListener("change", () => {
-  const lunchTime = lunch.value;
+  const napTime = nap.value;
   const actualTime = Date().substr(16, 2);
-  lunchTime === actualTime ? napDropdownOption() : napLunch();
+  napTime === actualTime ? napDropdownOption() : endNap();
 });
 
 clock();
