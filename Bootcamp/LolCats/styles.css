@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: black; */
+}
+
+.main {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.landingPage {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(/images/cat-yellow-eyes-paw-funny-cute-simple-background-digital-art.jpg);
+  /* background-image: url(/images/birthday-party-cats-cake-cat-happy-980766-wallhere.com.jpg); */
+}
+
+.partyTime {
+  background-image: url(/images/birthday-party-cats-cake-cat-happy-980766-wallhere.com.jpg);
+}
+
+#box {
+  width: auto;
+  /* height: 25%; */
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: whitesmoke;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 90px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.2);
+}
+
+.box {
+  visibility: hidden;
+}
+
+#clock {
+  padding: 1em 1em 0 1em;
+  /* margin: 1em; */
+}
+
+h1 {
+  font-size: 2em;
+  color: black;
+  font-family: "Lato", sans-serif;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+
+#options {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 1em;
+  border: none;
+  background-color: whitesmoke;
+
+  /* align-items: center; */
+}
+
+#napBox,
+#lunchBox,
+#lunch,
+#nap {
+  border-radius: 0.5rem;
+
+  padding: 1em;
+  border: none;
+  background-color: whitesmoke;
+}
+
+#lunch,
+#nap {
+  border: none;
+  background-color: whitesmoke;
+}
+
+.lunchTime {
+  background-image: url(/images/catEatingSushi.jpg);
+  background-size: 60%;
+  background-position: top;
+  /* width: 80%; */
+  /* top: 0; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* margin: 0 auto; */
+}
+
+.napTime {
+  background-image: url(/images/sleepingCat.jpg);
+  width: 70%;
+  /* display: flex; */
+  /* align-items: center; */
+  /* margin: 0 auto; */
+}
+
+#btn {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  width: 11rem;
+  margin: 1em;
+  padding: 0.3em;
+  border-radius: 0.3rem;
+  outline: none !important;
+  border: none;
+  /* transition: width 0.2s; */
+  transition: letter-spacing 0.2s, width 0.2s;
+  /* transition-timing-function: ease; */
+}
+
+#btn:hover {
+  width: 11.5rem;
+  cursor: pointer;
+  letter-spacing: 0.15rem;
+  /* font-size: 1.6rem; */
+}
