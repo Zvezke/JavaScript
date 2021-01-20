@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+#6279B8 #49516F #F5F5F5 #496F5D #4C9F70 * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+
+#box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin: auto;
+  padding: 0.5em 5em 2em;
+  border-radius: 0.3rem;
+  background-color: whitesmoke;
+  box-shadow: 0 0px 0.4px rgba(0, 0, 0, 0.015), 0 0px 0.9px rgba(0, 0, 0, 0.026),
+    0 0px 1.6px rgba(0, 0, 0, 0.038), 0 0px 2.9px rgba(0, 0, 0, 0.053),
+    0 0px 5.4px rgba(0, 0, 0, 0.075), 0 0px 13px rgba(0, 0, 0, 0.12);
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  padding: 0.5em 0;
+  color: #49516f;
+  font-family: poppins, sans-serif;
+  font-weight: 600;
+}
+
+#input {
+  padding: 0.3em;
+  color: #49516f;
+  border: solid 0.1rem;
+  border-radius: 0.3rem;
+  /* margin: 1rem 0; */
+}
+
+#inputField {
+  color: #49516f;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: whitesmoke;
+}
+
+#inputField:focus {
+  outline: none;
+}
+
+#addItem {
+  cursor: pointer;
+  transition: 0.2s;
+  color: #49516f;
+  border: none;
+  outline: none;
+  background-color: whitesmoke;
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+}
+
+/* #addItem:focus { */
+/* color: red; */
+/* } */
+
+#addItem:active {
+  transform: scale(0.97);
+}
+
+/* #addItem:active:after { */
+/* color: red; */
+/* } */
