@@ -43,9 +43,9 @@ body {
 
 h1 {
   padding: 0.5em 0;
+  text-align: center;
   color: var(--blueDark);
   font-weight: 600;
-  text-align: center;
 }
 
 #input {
@@ -94,4 +94,27 @@ ul button {
 ul * {
   display: flex;
   width: 100%;
+}
+
+#btnDone {
+  transition: 0.2s;
+  border: none;
+  border-radius: 20%;
+  background-color: var(--greenLight);
+  outline: none;
+}
+#btnDelete {
+  transition: 0.2s;
+  border: none;
+  border-radius: 20%;
+  background-color: var(--greenDark);
+  outline: none;
+}
+
+#btnDone:active {
+  transform: scale(0.97);
+}
+
+#btnDelete:active {
+  transform: scale(0.97);
 }

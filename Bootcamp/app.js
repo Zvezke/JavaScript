@@ -32,12 +32,3 @@ inputField.addEventListener("keypress", function (e) {
     this.value = "";
   }
 });
-
-// inputField.value = "";
-//Event Listeners - (button) capture input,
-
-// Check and remove item.
-
-//appendChild - create item
-
-//innerHTML (textContent) - create content in item.
