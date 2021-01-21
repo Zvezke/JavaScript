@@ -10,16 +10,19 @@ const createItem = (input) => {
   newItem.innerHTML = input;
 };
 
-// const inputValue = () => {
-// const inputValue = inputField.value;
-// console.log(inputValue);
-// };
-
-addItem.addEventListener("click", () => {
+addItem.addEventListener("click", function () {
   createItem(inputField.value);
+  inputField.value = "";
 });
-// InputField - create item on 'Enter and reset inputField
 
+inputField.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    createItem(this.value);
+    this.value = "";
+  }
+});
+
+// inputField.value = "";
 //Event Listeners - (button) capture input,
 
 // Check and remove item.
