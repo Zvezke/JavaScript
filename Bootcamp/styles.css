@@ -24,7 +24,6 @@ body {
   position: relative;
   display: flex;
   min-height: 100vh;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
 }
@@ -32,8 +31,6 @@ body {
 #box {
   position: absolute;
   top: 10em;
-  display: flex;
-  flex-direction: column;
   max-width: 50%;
   margin: auto;
   padding: 0.5em 5em 2em;
@@ -42,14 +39,13 @@ body {
   box-shadow: 0 0px 0.4px rgba(0, 0, 0, 0.015), 0 0px 0.9px rgba(0, 0, 0, 0.026),
     0 0px 1.6px rgba(0, 0, 0, 0.038), 0 0px 2.9px rgba(0, 0, 0, 0.053),
     0 0px 5.4px rgba(0, 0, 0, 0.075), 0 0px 13px rgba(0, 0, 0, 0.12);
-  justify-content: center;
-  align-items: center;
 }
 
 h1 {
   padding: 0.5em 0;
   color: var(--blueDark);
   font-weight: 600;
+  text-align: center;
 }
 
 #input {
@@ -58,7 +54,6 @@ h1 {
   color: var(--blueDark);
   border: solid 0.1rem;
   border-radius: 0.3rem;
-  /* margin: 1rem 0; */
 }
 
 #inputField {
@@ -83,35 +78,20 @@ h1 {
   font-weight: 400;
 }
 
-/* #addItem:focus { */
-/* color: red; */
-/* } */
-
 #addItem:active {
   transform: scale(0.97);
 }
 
-ul {
-  display: flex;
-  width: 100%;
-  /* border: solid blue; */
-  /* justify-content: flex-end; */
-}
-
 li {
-  /* margin-left: auto; */
   list-style: none;
-  /* justify-content: flex-start; */
 }
 
 ul button {
   width: 3em;
-  /* margin-right: auto; */
   border: solid black;
-  /* background-color: red; */
-  /* justify-content: flex-end; */
 }
 
-ul *:nth-child(2) {
-  margin-left: auto;
+ul * {
+  display: flex;
+  width: 100%;
 }

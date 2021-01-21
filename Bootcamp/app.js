@@ -5,18 +5,20 @@ const list = document.querySelector("#list");
 const addItem = document.querySelector("#addItem");
 
 const createItem = (input) => {
+  // Creating new elements
+  const div = document.createElement("div");
   const item = document.createElement("li");
   const btnDone = document.createElement("button");
   const btnDelete = document.createElement("button");
-  // const itemBtn =
-  const newItem = list.appendChild(item);
-  list.appendChild(btnDone);
-  list.appendChild(btnDelete);
+
+  // Appending new elements
+  const newDiv = list.appendChild(div);
+  const newItem = newDiv.appendChild(item);
+  newDiv.appendChild(btnDone);
+  newDiv.appendChild(btnDelete);
   btnDone.id = "btnDone";
   btnDelete.id = "btnDelete";
-  // btnDelete.setAttribute("id","btnDelete")
   newItem.innerHTML = input;
-  console.log(newItem);
 };
 
 addItem.addEventListener("click", function () {
