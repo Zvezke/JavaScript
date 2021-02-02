@@ -3,6 +3,7 @@
 const inputField = document.querySelector("#inputField");
 const list = document.querySelector("#list");
 const addItem = document.querySelector("#addItem");
+const x = {};
 
 const createItem = (input) => {
   // Creating new elements
@@ -17,7 +18,10 @@ const createItem = (input) => {
   newDiv.appendChild(btnDone);
   newDiv.appendChild(btnDelete);
   btnDone.id = "btnDone";
-  btnDelete.id = "btnDelete";
+  console.log(x);
+  console.log([Object.keys(x).length]);
+  btnDelete.id = "_" + [Object.keys(x).length];
+  x[Object.keys(x).length] = input;
   newItem.innerHTML = input;
 };
 
@@ -32,3 +36,5 @@ inputField.addEventListener("keypress", function (e) {
     this.value = "";
   }
 });
+
+// document.querySelector("#_0").parentElement.remove()
