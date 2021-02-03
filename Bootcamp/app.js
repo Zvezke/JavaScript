@@ -4,6 +4,10 @@ const inputField = document.querySelector("#inputField");
 const list = document.querySelector("#list");
 const addItem = document.querySelector("#addItem");
 const x = {};
+const buttons = document.querySelectorAll("button");
+// const listen = buttons.addEventListener("click", function () {
+//   console.log(addItem.closets(div));
+// });
 
 const createItem = (input) => {
   // Creating new elements
@@ -23,6 +27,14 @@ const createItem = (input) => {
   btnDelete.id = "_" + [Object.keys(x).length];
   x[Object.keys(x).length] = input;
   newItem.innerHTML = input;
+  buttons.addEventListener("click", function () {
+    console.log(addItem.closets(div));
+  });
+  // return btnDelete;
+  // console.log(btnDelete.id);
+  // btnDelete.addEventListener("click", function () {
+  // document.querySelector(btnDelete.id).parentElement.remove();
+  // });
 };
 
 addItem.addEventListener("click", function () {
