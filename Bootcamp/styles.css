@@ -82,6 +82,10 @@ h1 {
   transform: scale(0.97);
 }
 
+.done {
+  opacity: 0.4;
+}
+
 li {
   list-style: none;
 }

@@ -15,7 +15,6 @@ const createItem = (input) => {
   const item = document.createElement("li");
   const btnDone = document.createElement("button");
   const btnDelete = document.createElement("button");
-
   // Appending new elements
   const newDiv = list.appendChild(div);
   const newItem = newDiv.appendChild(item);
@@ -27,8 +26,12 @@ const createItem = (input) => {
   btnDelete.id = "_" + [Object.keys(x).length];
   x[Object.keys(x).length] = input;
   newItem.innerHTML = input;
-  buttons.addEventListener("click", function () {
-    console.log(addItem.closets(div));
+  btnDelete.addEventListener("click", function () {
+    btnDelete.parentElement.remove();
+  });
+
+  btnDone.addEventListener("click", function () {
+    newDiv.classList.toggle("done");
   });
   // return btnDelete;
   // console.log(btnDelete.id);
@@ -48,5 +51,3 @@ inputField.addEventListener("keypress", function (e) {
     this.value = "";
   }
 });
-
-// document.querySelector("#_0").parentElement.remove()
