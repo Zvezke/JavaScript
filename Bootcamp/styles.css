@@ -8,7 +8,9 @@
   --greenDark: #496f5d;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -92,7 +94,6 @@ li {
 
 ul button {
   width: 3em;
-  border: solid black;
 }
 
 ul * {
@@ -100,19 +101,43 @@ ul * {
   width: 100%;
 }
 
-#btnDone {
+.btnDone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 0.2s;
   border: none;
   border-radius: 20%;
   outline: none;
-  background-color: var(--greenLight);
+  font-size: 1em;
+  color: var(--blueDark);
+  background-color: whitesmoke;
 }
-#btnDelete {
+
+.btnDone::before {
+  content: "\f058";
+  font-family: "Font Awesome 5 Free";
+  font-weight: regular;
+}
+
+.btnDelete {
+  display: flex;
   transition: 0.2s;
+  color: var(--blueDark);
+  background-color: whitesmoke;
   border: none;
   border-radius: 20%;
   outline: none;
-  background-color: var(--greenDark);
+  font-size: 1em;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--greenDark); */
+}
+
+.btnDelete::before {
+  content: "\f057";
+  font-family: "Font Awesome 5 Free";
+  font-weight: regular;
 }
 
 #btnDone:active {

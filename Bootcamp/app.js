@@ -15,15 +15,19 @@ const createItem = (input) => {
   const newItem = newDiv.appendChild(item);
   const btnDone = document.createElement("button");
   const btnDelete = document.createElement("button");
+  // const iconDelete = '<i class="far fa-times-circle"></i>';
+  // const iconDone = '<i class="far fa-check-circle"></i>';
 
   newDiv.appendChild(btnDone);
   newDiv.appendChild(btnDelete);
   btnDone.id = "btnDone";
-  console.log(x);
-  console.log([Object.keys(x).length]);
   btnDelete.id = "_" + [Object.keys(x).length];
+  btnDone.classList.add("btnDone");
+  btnDelete.classList.add("btnDelete");
   x[Object.keys(x).length] = input;
   newItem.innerHTML = input;
+  // btnDone.innerHTML = iconDone;
+  // btnDelete.innerHTML = iconDelete;
 
   btnDelete.addEventListener("click", function () {
     btnDelete.parentElement.remove();
@@ -35,12 +39,14 @@ const createItem = (input) => {
 };
 
 addItem.addEventListener("click", function () {
-  createItem(inputField.value);
-  inputField.value = "";
+  if (inputField.value !== "") {
+    createItem(inputField.value);
+    inputField.value = "";
+  }
 });
 
 inputField.addEventListener("keypress", function (e) {
-  if (e.key === "Enter") {
+  if (e.key === "Enter" && this.value !== "") {
     createItem(this.value);
     this.value = "";
   }
