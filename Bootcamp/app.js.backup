@@ -5,17 +5,19 @@ const list = document.querySelector("#list");
 const addItem = document.querySelector("#addItem");
 const x = {};
 const buttons = document.querySelectorAll("button");
-// Creating new elements
-// Appending new elements
+// const listen = buttons.addEventListener("click", function () {
+//   console.log(addItem.closets(div));
+// });
 
 const createItem = (input) => {
-  const item = document.createElement("li");
+  // Creating new elements
   const div = document.createElement("div");
-  const newDiv = list.appendChild(div);
-  const newItem = newDiv.appendChild(item);
+  const item = document.createElement("li");
   const btnDone = document.createElement("button");
   const btnDelete = document.createElement("button");
-
+  // Appending new elements
+  const newDiv = list.appendChild(div);
+  const newItem = newDiv.appendChild(item);
   newDiv.appendChild(btnDone);
   newDiv.appendChild(btnDelete);
   btnDone.id = "btnDone";
@@ -24,7 +26,6 @@ const createItem = (input) => {
   btnDelete.id = "_" + [Object.keys(x).length];
   x[Object.keys(x).length] = input;
   newItem.innerHTML = input;
-
   btnDelete.addEventListener("click", function () {
     btnDelete.parentElement.remove();
   });
@@ -32,6 +33,11 @@ const createItem = (input) => {
   btnDone.addEventListener("click", function () {
     newDiv.classList.toggle("done");
   });
+  // return btnDelete;
+  // console.log(btnDelete.id);
+  // btnDelete.addEventListener("click", function () {
+  // document.querySelector(btnDelete.id).parentElement.remove();
+  // });
 };
 
 addItem.addEventListener("click", function () {
